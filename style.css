@@ -204,7 +204,7 @@ h2 {
 }
 
 .info-content h2, span {
-  color: #FFFDFC;
+  color: #d95716;
 }
 
 .info-circle {
@@ -222,22 +222,18 @@ h2 {
     margin: 0 10px;
 }
 
-.circle-1 {
-    height: 100px;
-    width: 100px;
-    border: 1px solid #FFFDFC;
-    border-radius: 50%;
-    padding-top: 35px;
-}
+
 
 .circle-1 h3 {
-    color: #EBEBEB;
+    color: #ec6e2f;
     font-size: 25px;
 }
 
 .circle-txt p {
-    color: #FFFDFC;
+    color: #f0b942;
     margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .info-2 {
