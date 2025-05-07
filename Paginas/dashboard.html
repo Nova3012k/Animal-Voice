@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideBar</title>
+    <link rel="stylesheet" href="/Estilos/dashboard.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <ion-icon name="grid-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+
+    </div>
+
+    <div class="class barra-lateral ">
+        <div>
+            <div class="nombre-pagina">
+                <ion-icon id="reorder" name="reorder-four-outline"></ion-icon>
+                <span>AmimalVoice</span>
+            </div>
+            <button id="btn-crear-reporte" class="boton">
+                <ion-icon name="add-outline"></ion-icon>
+                <span>Crear Reporte</span>
+            </button>
+            
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id ="link-inicio" href="#">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="link-reportes" href="#">
+                        <ion-icon name="document-text-outline"></ion-icon>
+                        <span>Mis reportes</span>
+                    </a>
+                </li>
+                <li> 
+                    <a id="link-directorio" href="#">
+                        <ion-icon name="map-outline"></ion-icon>
+                        <span>Directorio</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="link-adopciones" href="#">
+                        <ion-icon name="paw-outline"></ion-icon>
+                        <span>Adopciones</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="link-cuidados" href="#">
+                        <ion-icon name="warning-outline"></ion-icon>
+                        <span>Cuidados</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <div class="linea"></div>
+
+        <div class="modo-oscuro">
+            <div class="info">
+                <ion-icon name="moon-outline"></ion-icon>
+                <span>Modo oscuro</span>
+            </div>
+            <div class="switch">
+                <div class="base">
+                    <div class="circulo">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="usuario">
+            <div class="perfil">
+                <ion-icon name="person-outline"></ion-icon>
+            </div>
+            <div class="info-usuario">
+                <div class="nombre-email">
+                    <span class="nombre">TSJ ZAPOPAN</span>
+                    <span class="email">AnimalVoice@gmail.com</span>
+                </div>
+                <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <main>
+       <!-- Sección de Inicio -->
+<section id="seccion-inicio" class="seccion visible">
+    <div class="bienvenida">
+        <h1>Bienvenido a AnimalVoice</h1>
+        <p>Gracias por ayudar a combatir el maltrato animal. Usa el menú para comenzar.</p>
+    </div>
+
+    <div class="descripcion">
+        <div class="info-carta">
+            <div class="texto-carta">
+                <h3>Adopta una mascota</h3>
+                <p>Encuentra animales disponibles para adopción y dale una oportunidad a una nueva vida. ¡Adopta, no compres!</p>
+            </div>
+        </div>
+        
+        <div class="info-carta">
+            <div class="texto-carta">
+                <h3>Reporta maltrato</h3>
+                <p>Si eres testigo de maltrato animal, puedes denunciarlo fácilmente desde nuestra plataforma, y nosotros nos encargamos del resto.</p>
+            </div>
+        </div>
+        
+        <div class="info-carta">
+            <div class="texto-carta">
+                <h3>Consejos de Cuidado</h3>
+                <p>Te brindamos información y consejos prácticos sobre cómo cuidar a tu mascota para asegurar su bienestar y salud.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="animacion-gracias">
+        <h2>¡Juntos podemos marcar la diferencia!</h2>
+        <p>Tu acción y tu voz pueden cambiar la vida de muchos animales. Únete a nuestra causa y haz que cada voz cuente.</p>
+    </div>
+
+    <div class="animaciones-cta">
+        <button class="cta-btn" onclick="window.location.href='#link-adopciones';">Ver Adopciones</button>
+        <button class="cta-btn" onclick="window.location.href='#link-reportes';">Denunciar Maltrato</button>
+    </div>
+</section>
+
+      
+        
+        <!-- Modal de Crear Reporte -->
+<div id="modal-crear-reporte" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="cerrar-modal">&times;</span>
+        <h2>Crear Reporte de Maltrato Animal</h2>
+        <form id="form-crear-reporte">
+            <label for="nombre">Nombre del Reportante:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="descripcion">Descripción del Incidente:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea>
+
+            <label for="ubicacion">Ubicación del Incidente:</label>
+            <input type="text" id="ubicacion" name="ubicacion" required>
+
+            <button type="submit">Enviar Reporte</button>
+        </form>
+    </div>
+</div>
+        </section>
+      
+       <!-- Sección de Mis Reportes -->
+<section id="seccion-reportes" class="seccion">
+    <h2>Mis Reportes</h2>
+    <p>Aquí puedes visualizar todos los reportes que has generado:</p>
+  
+    <div class="contenedor-reportes">
+      <!-- Aquí se insertarán las tarjetas de reportes desde JS o base de datos -->
+      <!-- Ejemplo de una tarjeta: -->
+      <div class="tarjeta-reporte">
+        <div class="cabecera-reporte">
+          <h3>Maltrato en parque</h3>
+          <span class="estado estado-pendiente">Pendiente</span>
+        </div>
+        <p><strong>Ubicación:</strong> Colonia Centro, CDMX</p>
+        <p><strong>Descripción:</strong> Perro encadenado sin agua ni sombra.</p>
+        <p class="fecha-reporte">Enviado el: 06/05/2025 - 10:24 AM</p>
+      </div>
+    
+    </div>
+  </section>
+  
+      
+        <!-- Sección Directorio -->
+        <section id="seccion-directorio" class="seccion">
+            <h2>Directorio de Refugios y Organizaciones</h2>
+            <p>Conoce y contacta organizaciones que protegen y cuidan animales.</p>
+          
+            <div class="contenedor-directorio">
+              <!-- Tarjetas de ejemplo  -->
+              <div class="tarjeta-directorio">
+                <h3>Refugio Patitas Felices</h3>
+                <p><strong>Dirección:</strong> Calle Esperanza #123, CDMX</p>
+                <p><strong>Teléfono:</strong> 55 1234 5678</p>
+                <p><strong>Correo:</strong> contacto@patitasfelices.org</p>
+                <button class="btn-contactar">Contactar</button>
+              </div>
+          
+              <div class="tarjeta-directorio">
+                <h3>Organización Huellas de Amor</h3>
+                <p><strong>Dirección:</strong> Av. Solidaridad #456, Guadalajara</p>
+                <p><strong>Teléfono:</strong> 33 8765 4321</p>
+                <p><strong>Correo:</strong> ayuda@huellasdeamor.mx</p>
+                <button class="btn-contactar">Contactar</button>
+              </div>
+              
+              <!-- Puedes insertar más tarjetas aquí -->
+            </div>
+          </section>
+          
+      
+        <!-- Sección Adopciones -->
+        <section id="seccion-adopciones" class="seccion">
+            <h2>Adopciones Disponibles</h2>
+            <p>Encuentra a tu nuevo mejor amigo. Filtra por especie, estado y más.</p>
+          
+            <div class="contenedor-adopciones">
+              <!-- Tarjeta de ejemplo 1 -->
+              <div class="tarjeta-adopcion">
+                <img src="/images/golden.jpg" alt="Perro en adopción" class="img-adopcion">
+                <div class="info-adopcion">
+                    <h3>Toby</h3>
+                    <p><strong>Especie:</strong> Perro</p>
+                    <p><strong>Estado:</strong> Saludable</p>
+                    <p><strong>Discapacidad:</strong> Ninguna</p>
+                    <p><strong>Vacunas:</strong> Completas</p>
+                    <p><strong>Raza:</strong> Labrador</p>
+                    <p><strong>Color:</strong> Dorado</p>
+                    <p><strong>Género:</strong> Macho</p>
+                    <button class="btn-adoptar">Adoptar</button>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Tarjeta de ejemplo 2 -->
+              <div class="tarjeta-adopcion">
+                <img src="/images/saimes.jpg" alt="Gato en adopción" class="img-adopcion">
+                <div class="info-adopcion">
+                  <h3>Copernico</h3>
+                  <p><strong>Especie:</strong> Gato</p>
+                  <p><strong>Estado:</strong> Enfermo (recuperación)</p>
+                  <p><strong>Discapacidad:</strong> Ceguera parcial</p>
+                  <p><strong>Vacunas:</strong> Antirrábica</p>
+                  <p><strong>Raza:</strong> Siames</p>
+                  <p><strong>Color:</strong> Gris</p>
+                  <p><strong>Género:</strong> Hembra</p>
+                  <button class="btn-adoptar">Adoptar</button>
+                </div>
+              </div>
+          
+              <!-- Puedes agregar más tarjetas aquí o cargarlas desde base de datos -->
+            </div>
+          </section>
+          
+        <!-- Sección de Cuidados -->
+<!-- Sección de Cuidados -->
+<section id="seccion-cuidados" class="seccion">
+    <h1>Cuidados para tus Mascotas</h1>
+    <p class="descripcion-cuidados">Consejos prácticos para el bienestar, alimentación y protección de tus animales.</p>
+  
+    <div class="grid-cuidados">
+      <!-- Tarjeta -->
+      <div class="tarjeta-cuidado grande">
+        <h3>¿Qué hacer si tu mascota se enferma?</h3>
+        <p>Detecta cambios en el apetito, energía o comportamiento. No la automediques, acude al veterinario cuanto antes para evitar complicaciones mayores.</p>
+      </div>
+  
+      <div class="tarjeta-cuidado mediana">
+        <h3>¿Qué hacer si presencias maltrato animal?</h3>
+        <p>No enfrentes directamente. Registra evidencia (foto/video), y reporta a una organización o autoridad local.</p>
+      </div>
+  
+      <div class="tarjeta-cuidado chica">
+        <h3>Comida para perros</h3>
+        <p>Evita huesos cocidos, chocolate, cebolla y alimentos procesados. Usa croquetas especiales según edad y tamaño.</p>
+      </div>
+  
+      <div class="tarjeta-cuidado chica">
+        <h3>Comida para gatos</h3>
+        <p>No les des leche ni carne cruda. Opta por alimento balanceado y agua limpia diaria.</p>
+      </div>
+  
+      <div class="tarjeta-cuidado mediana">
+        <h3>Higiene y cuidado general</h3>
+        <p>Baños cada 3-4 semanas, corte de uñas, limpieza de orejas y antipulgas. Mantén su espacio limpio y libre de peligros.</p>
+      </div>
+  
+      <div class="tarjeta-cuidado grande">
+        <h3>Cuidados para mascotas con discapacidad</h3>
+        <p>Adapta su entorno con rampas, cuida sus articulaciones y mantén contacto frecuente con el veterinario. La paciencia y el amor son fundamentales.</p>
+      </div>
+    </div>
+  </section>
+
+      </main>
+      
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/Script/dashboard.js"></script>
+</body>
+
+</html>
